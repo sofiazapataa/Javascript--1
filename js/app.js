@@ -13,7 +13,6 @@ const productos = [
   { nombre: "Delineador", precio: 6000, tipo: "en gel" }
 ];
 
-// function mostrar los productos
 function mostrarProductos() {
   console.log("Productos disponibles:");
   for (let i = 0; i < productos.length; i++) {
@@ -22,7 +21,6 @@ function mostrarProductos() {
 }
 mostrarProductos();
 
-// function elegir producto
 function elegirProducto() {
   let eleccion = prompt(
     "Elige un producto:\n1. Rimel\n2. Rubor\n3. Broncer\n4. Iluminador\n5. Labial\n6. Delineador"
@@ -38,7 +36,6 @@ function elegirProducto() {
   }
 }
 
-// function calcular total y unidades
 function calcularTotal(indiceProducto) {
   let cantidad = prompt("¿Cuántas unidades querés comprar?");
   cantidad = parseInt(cantidad);
@@ -54,7 +51,7 @@ function calcularTotal(indiceProducto) {
   let total = productoElegido.precio * cantidad;
   alert("Elegiste " + cantidad + " x " + productoElegido.nombre + "\nTotal a pagar: $" + total);
 
-  console.log("🧾 ----- RESUMEN DE COMPRA -----");
+  console.log("----- RESUMEN DE COMPRA -----");
   console.log("Producto: " + productoElegido.nombre);
   console.log("Cantidad: " + cantidad);
   console.log("Precio unitario: $" + productoElegido.precio);
@@ -62,7 +59,6 @@ function calcularTotal(indiceProducto) {
   console.log("-------------------------------");
 }
 
-// ejecucion final
 let productoElegido = elegirProducto();
 calcularTotal(productoElegido);
 
